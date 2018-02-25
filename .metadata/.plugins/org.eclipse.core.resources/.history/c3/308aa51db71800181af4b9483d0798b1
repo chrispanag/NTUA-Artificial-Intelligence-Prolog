@@ -1,0 +1,9 @@
+package arti;
+
+public class Line {
+	private String id;
+	private String type;
+	private boolean oneway;
+	private boolean lit;
+	
+}

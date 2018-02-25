@@ -1,0 +1,33 @@
+package arti;
+
+import java.io.*;
+import java.util.*;
+
+public class CSVReader {
+	
+	private String csvFile = "";
+	private Scanner inputstream;
+	
+	public CSVReader (String file) {
+		inputstream = new Scanner(file);
+	}
+
+    public ArrayList<String[]> readCSV() {
+    	ArrayList<String[]> output = new ArrayList<String[]>();
+    	Scanner entries = inputstream.useDelimiter("\n");
+    	while (entries.hasNext()) {
+    		Scanner entry = new Scanner(entries.next());
+    		ArrayList<String> line = new ArrayList<String>();
+    		while (entry.hasNext()) {
+    			line.add(entry.next());
+    		}
+    		entry.close();
+    		output.add((String[]) line.toArray());
+    	}
+    	entries.close();
+    	
+        output.remove(0);
+        return output;
+    }
+
+}

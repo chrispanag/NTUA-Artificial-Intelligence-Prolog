@@ -1,0 +1,14 @@
+package arti;
+
+public class Edge {
+	public Node to;
+	public String road;
+	public double length;
+	public int maxSpeed
+	
+	public Edge(Node to, String road, double length) {
+		this.to = to;
+		this.road = road;
+		this.length = length;
+	}
+}

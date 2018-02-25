@@ -1,0 +1,19 @@
+package arti;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Test {
+
+	public static void main(String[] args) {
+		CSVReader csv = new CSVReader("lines.csv");
+		ArrayList<String[]> mapPoints = csv.readCSV();
+		Iterator<String[]> it = mapPoints.iterator();
+		while (it.hasNext()) {
+			String[] p = it.next();
+			Predicate k = new Predicate("")
+		}
+
+	}
+
+}

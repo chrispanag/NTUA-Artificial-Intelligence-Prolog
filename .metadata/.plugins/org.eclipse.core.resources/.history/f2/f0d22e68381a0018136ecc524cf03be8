@@ -1,0 +1,33 @@
+package arti;
+
+import java.util.ArrayList;
+
+public class Taxi {
+	public Coordinate coord, node, position;
+	public String id;
+	// New variables
+	public boolean available;
+	public ArrayList<String> languages;
+	public float rating;
+	public boolean long_distance;
+	public int capacity;
+	public enum type { large, compact, subcompact };
+	
+	// TODO: Update constructor for new properties
+	public Taxi(Coordinate position, String id) {
+		this.position = position;
+		this.id = id;
+	}
+	
+	public Taxi (ArrayList<String> taxiData) {
+		if (taxiData.get(0).length() > 0 && taxiData.get(1).length() > 0) {
+			this.coord = new Coordinate(taxiData.get(0), taxiData.get(1));
+		}
+		if (taxiData.get(2).length() > 0) id = taxiData.get(2);
+	}
+
+	@Override
+	public String toString() {
+		return "Taxi [position=" + position + ", node=" + node + ", id=" + id + "]";
+	}
+}

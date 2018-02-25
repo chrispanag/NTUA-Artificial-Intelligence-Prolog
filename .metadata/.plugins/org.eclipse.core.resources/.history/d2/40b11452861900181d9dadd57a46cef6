@@ -1,0 +1,113 @@
+package arti;
+
+import java.util.*;
+
+import com.ugos.jiprolog.engine.JIPEngine;
+import com.ugos.jiprolog.engine.JIPQuery;
+import com.ugos.jiprolog.engine.JIPSyntaxErrorException;
+import com.ugos.jiprolog.engine.JIPTerm;
+import com.ugos.jiprolog.engine.JIPTermParser;
+
+public class Astar {
+	Coordinate target;
+	Coordinate start;
+	HashMap<String, Node> node_map;
+	
+	int maxMetopo;
+	
+	class searchNode implements Comparable<searchNode> {
+		public double f, g;
+		public Node node;
+		public ArrayList<Node> path;
+	
+		
+		public int compare(searchNode s1, searchNode s2) {
+			return Double.compare(s1.f, s2.f);
+		}
+		
+		
+
+		public int compareTo(searchNode s2) {
+			return Double.compare(f, s2.f);
+		}
+		
+		public searchNode(double g, Node node, ArrayList<Node> pastPath) {
+			this.g = g;
+			this.f = g + node.coord.distanceFrom(target);
+			this.node = node;
+			pastPath.add(node);
+			this.path = pastPath;
+		}
+
+		private Astar getOuterType() {
+			return Astar.this;
+		}
+	}
+	
+	private ArrayList<searchNode> open;
+	private HashSet<searchNode> closed;
+	
+	
+	public Astar (Coordinate target, Coordinate start, int maxMetopo, HashMap<String, Node> node_map, JIPEngine jip) {
+		this.node_map = node_map;
+		this.target = target;
+		this.start = start;
+		this.maxMetopo = maxMetopo;
+		this.jip = jip;
+		ArrayList<Coordinate> path = new ArrayList<Coordinate>();
+		path.add(start);
+		open = new ArrayList<searchNode>(maxMetopo);
+		open.add(new searchNode(0, start, path));
+		closed = new HashSet<searchNode>(maxMetopo);
+	}
+	
+	public Path start() {
+		searchNode selected = null;
+		
+		int max = 0;
+		int steps = 0;
+		while (!open.isEmpty()) {
+			steps++;
+			open.sort(null);
+			
+			if (open.size() > maxMetopo) 
+				open = new ArrayList<searchNode>(open.subList(0, maxMetopo - 1));
+			
+			if (open.size() > max) 
+				max = open.size();
+			
+			selected = open.get(0);
+			
+			open.remove(0);
+			closed.add(selected);
+			ArrayList<String> children_ids = selected.;
+			ArrayList<searchNode> children = new ArrayList<searchNode>();
+			
+			if (selected.coord.equals(target)) 
+				break;
+			
+			final searchNode selected1 = selected;
+			edges.forEach((e) -> {
+				ArrayList<Coordinate> path = new ArrayList<Coordinate>(selected1.path);
+				searchNode node = new searchNode(selected1.g + e.length, e.to, path);
+				if (!closed.contains(node)) 
+					children.add(node);
+			});
+			
+			open.addAll(children);
+		}
+		System.out.println("Max: "+ max +"\tSteps: " + steps);
+		if (selected.coord.equals(target)) {
+			return new Path(selected.path, selected.g);
+		}
+		return null;
+	}
+	
+	private static JIPTerm queryProlog (JIPEngine jip, String name, String[] parameters) {
+		JIPTermParser parser = jip.getTermParser();
+		JIPQuery jipQuery;
+		Predicate k = new Predicate(name, parameters);
+		jipQuery = jip.openSynchronousQuery(parser.parseTerm(k.toString()));
+		return jipQuery.nextSolution();
+	}
+}

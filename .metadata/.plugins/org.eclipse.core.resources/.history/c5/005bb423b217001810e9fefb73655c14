@@ -1,0 +1,12 @@
+package arti;
+
+import java.util.ArrayList;
+
+public class Predicate {
+	private String name;
+	private ArrayList<String> parameters;
+	public Predicate(String set_name, ArrayList<String> params) {
+		name = set_name;
+		params = new ArrayList<String>(params);
+	}
+}

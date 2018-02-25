@@ -1,0 +1,11 @@
+package arti;
+
+import java.io.*;
+
+public class PrologCreator {
+	private String plFile = "";
+	
+	public PrologCreator(String file) {
+		plFile = file;
+	}
+}

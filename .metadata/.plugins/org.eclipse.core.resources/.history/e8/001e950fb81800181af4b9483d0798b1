@@ -1,0 +1,36 @@
+package arti;
+
+import java.util.ArrayList;
+
+public class Line {
+	public String id;
+	public String type;
+	public boolean oneway = false;
+	public boolean lit = false;
+	public int maxspeed;
+	public boolean reverse = false;
+	
+	public Line(ArrayList<String> properties) {
+		if (properties.get(0) != "") {
+			id = properties.get(0);
+		}
+		if (properties.get(1) != "") {
+			type = properties.get(0);
+		}
+		// Oneway property
+		if (properties.get(3) == "yes") {
+			oneway = true;
+		} else if (properties.get(3) == "-1") {
+			oneway = true;
+			reverse = true;
+		}
+		
+		if (properties.get(4) == "yes") {
+			lit = true;
+		}
+		
+		if (properties.get(6) != "") {
+			maxspeed = Integer.parseInt(properties.get(6));
+		}
+	}
+}

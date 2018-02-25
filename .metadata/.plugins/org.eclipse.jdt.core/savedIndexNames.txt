@@ -1,0 +1,22 @@
+INDEX VERSION 1.130+C:\Users\chris\Desktop\arti\.metadata\.plugins\org.eclipse.jdt.core
+1136989993.index
+2143835185.index
+2664247221.index
+2595158783.index
+3336425412.index
+3796415748.index
+799905038.index
+2620612944.index
+182659324.index
+495581332.index
+367495081.index
+1738741152.index
+2676236981.index
+1768259474.index
+2871722055.index
+746653826.index
+3448122315.index
+4018975733.index
+4038663971.index
+1342908693.index
+2417204353.index

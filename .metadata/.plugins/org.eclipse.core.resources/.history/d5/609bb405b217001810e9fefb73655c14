@@ -1,0 +1,9 @@
+package arti;
+
+public class Predicate {
+	private name;
+	private ArrayList<String>;
+	public Predicate(String name, ArrayList<String> params) {
+		
+	}
+}

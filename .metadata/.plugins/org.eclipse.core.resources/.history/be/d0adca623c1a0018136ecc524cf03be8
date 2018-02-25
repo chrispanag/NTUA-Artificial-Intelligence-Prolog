@@ -1,0 +1,32 @@
+package arti;
+
+import java.time.*;
+import java.util.ArrayList;
+
+public class Client {
+	public Coordinate start;
+	public Coordinate dest;
+	public LocalTime time;
+	
+	
+	public Client (ArrayList<String> clientData) {
+		// Start
+		if (clientData.get(0).length() > 0 && clientData.get(1).length() > 0) {
+			this.start = new Coordinate(clientData.get(0), clientData.get(1));
+		}
+		
+		// End
+		if (clientData.get(2).length() > 0 && clientData.get(3).length() > 0) {
+			this.dest = new Coordinate(clientData.get(2), clientData.get(3));
+		}
+		
+		if (clientData.get(4).length() > 0) {
+			this.time = LocalTime.parse(clientData.get(4));
+		}
+		
+		if (clientData.get(5).length() > 0) {
+			this.persons = Integer.parseInt(clientData.get(5));
+		}
+		
+	}
+}

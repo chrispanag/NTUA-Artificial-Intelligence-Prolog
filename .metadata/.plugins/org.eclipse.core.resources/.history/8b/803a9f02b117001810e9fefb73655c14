@@ -1,0 +1,8 @@
+package arti;
+
+public class PrologCreator {
+	private String plFile = "";
+	public PrologCreator(String file) {
+		csvFile = file;
+	}
+}

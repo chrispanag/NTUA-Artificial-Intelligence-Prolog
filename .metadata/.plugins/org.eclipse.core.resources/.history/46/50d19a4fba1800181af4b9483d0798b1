@@ -1,0 +1,40 @@
+package arti;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
+
+public class CSVReader {
+	
+	private Scanner inputstream;
+	
+	public CSVReader (String file) {
+		File test = new File(file);
+		try {
+			inputstream = new Scanner(test);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+    public ArrayList<ArrayList<String>> readCSV() {
+    	ArrayList<ArrayList<String>> output = new ArrayList<ArrayList<String>>();
+    	Scanner entries = inputstream.useDelimiter("\n");
+    	while (entries.hasNext()) {
+    		Scanner entry = new Scanner(entries.next()).useDelimiter(",");
+    		ArrayList<String> line = new ArrayList<String>();
+    		while (entry.hasNext()) {
+    			System.out.println(line.toString());
+    			line.add(entry.next());
+    		}
+    		entry.close();
+    		output.add(line);
+    	}
+    	entries.close();
+    	
+        output.remove(0);
+        return output;
+    }
+
+}

@@ -1,0 +1,92 @@
+package arti;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import java.io.IOException;
+
+import com.ugos.jiprolog.engine.JIPEngine;
+import com.ugos.jiprolog.engine.JIPQuery;
+import com.ugos.jiprolog.engine.JIPSyntaxErrorException;
+import com.ugos.jiprolog.engine.JIPTerm;
+import com.ugos.jiprolog.engine.JIPTermParser;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// Read Lines
+		CSVReader csvLines = new CSVReader("lines.csv");
+		ArrayList<ArrayList<String>> lineData = csvLines.readCSV();
+		ArrayList<Line> lines = new ArrayList<Line>();
+		Iterator<ArrayList<String>> lineData_it = lineData.iterator();
+		while (lineData_it.hasNext()) {
+			ArrayList<String> p = lineData_it.next();
+			lines.add(new Line(p));
+		}
+		
+		// Read Nodes
+		CSVReader csvNodes = new CSVReader("nodes.csv");
+		ArrayList<ArrayList<String>> nodeData = csvNodes.readCSV();
+		ArrayList<Node> nodes = new ArrayList<Node>();
+		Iterator<ArrayList<String>> nodeData_it = nodeData.iterator();
+		while (nodeData_it.hasNext()) {
+			ArrayList<String> p = nodeData_it.next();
+			nodes.add(new Node(p));
+		}
+		
+		
+		PrologCreator plCreator = new PrologCreator("test.pl");
+		writeLinePredicates(lines, plCreator);
+		
+		Iterator<Node> node_it = nodes.iterator();
+		while (node_it.hasNext()) {
+			Node n = node_it.next();
+			Predicate k = new Predicate("belongsTo", new String[] {n.id, n.line_id});
+			plCreator.writePredicate(k);
+		}
+		
+		node_it = nodes.iterator();
+		Node prev = node_it.next();
+		while (node_it.hasNext()) {
+			Node n = node_it.next();
+			if (prev.line_id.equals(n.line_id)) {
+				Predicate k = new Predicate("isConnected", new String[] {prev.id, n.id});
+				plCreator.writePredicate(k);
+			}
+			prev = n;
+		}
+		
+		plCreator.close();
+		
+		JIPEngine jip = new JIPEngine();
+	}
+	
+	public static void writeLinePredicates(ArrayList<Line> lines, PrologCreator plCreator) {
+		Iterator<Line> line_it = lines.iterator();
+		
+		while (line_it.hasNext()) {
+			Line l = line_it.next();
+			if (l.isRoad()) {
+				Predicate k = new Predicate("isRoad", new String[] {l.id});
+				plCreator.writePredicate(k);
+			}
+		}
+		line_it = lines.iterator();
+		while (line_it.hasNext()) {
+			Line l = line_it.next();
+			if (l.oneway) {
+				Predicate k = new Predicate("oneway", new String[] {l.id});
+				plCreator.writePredicate(k);
+			}
+		}
+		line_it = lines.iterator();
+		while (line_it.hasNext()) {
+			Line l = line_it.next();
+			if (l.reverse) {
+				Predicate k = new Predicate("reverse", new String[] {l.id});
+				plCreator.writePredicate(k);
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,24 @@
+package arti;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Test {
+
+	public static void main(String[] args) {
+		CSVReader csv = new CSVReader("lines.csv");
+		ArrayList<String[]> mapPoints = csv.readCSV();
+		Iterator<String[]> it = mapPoints.iterator();
+		PrologCreator plCreator = new PrologCreator("test.pl");
+		while (it.hasNext()) {
+			String[] p = it.next();
+			if (p[1] != "") {
+				Predicate k = new Predicate("isRoad", new String[] {p[0]});
+				plCreator.writePredicate(k);
+			}
+			
+		}
+
+	}
+
+}

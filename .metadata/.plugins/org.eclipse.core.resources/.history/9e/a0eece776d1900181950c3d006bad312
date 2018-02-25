@@ -1,0 +1,50 @@
+package arti;
+
+import java.util.ArrayList;
+
+import com.ugos.jiprolog.engine.JIPEngine;
+import com.ugos.jiprolog.engine.JIPQuery;
+import com.ugos.jiprolog.engine.JIPTerm;
+import com.ugos.jiprolog.engine.JIPTermParser;
+
+public class Node {
+	public Coordinate coord;
+	public String line_id;
+	public String id;
+	
+	// Constructor
+	public Node(ArrayList<String> n) {
+		//  Set Coordinates
+		if (n.get(0).length() > 0 && n.get(1).length() > 0) {
+			this.coord = new Coordinate(n.get(0), n.get(1));
+		}
+		
+		// Line ID
+		if (n.get(2).length() > 0) {
+			line_id = n.get(2);
+		}
+		
+		// Node ID 
+		if (n.get(3).length() > 0) {
+			id = n.get(3);
+		}
+	}
+	
+	// Returns the IDs of the Nodes you can move from this node.
+	public ArrayList<String> canMoveTo(JIPEngine jip) {
+		ArrayList<String> children_ids = new ArrayList<String>();
+		JIPTerm query = queryProlog(jip, "canMoveFromTo", new String[] {id, "X"});
+		while (query != null) {
+			children_ids.add(query.getVariablesTable().get("X").toString());
+			query = query.nextSolution();
+		}
+		return children_ids;
+	}
+	
+	private static JIPQuery queryProlog (JIPEngine jip, String name, String[] parameters) {
+		JIPTermParser parser = jip.getTermParser();
+		JIPQuery jipQuery;
+		Predicate k = new Predicate(name, parameters);
+		return jip.openSynchronousQuery(parser.parseTerm(k.toString()));
+	}
+}

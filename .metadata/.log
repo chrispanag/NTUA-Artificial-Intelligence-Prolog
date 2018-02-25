@@ -1,0 +1,1105 @@
+!SESSION 2018-02-19 21:59:44.673 -----------------------------------------------
+eclipse.buildId=4.7.1.M20171009-0410
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-19 22:00:14.247
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\chris'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-02-19 22:00:25.775
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: An error occurred while downloading http://download.eclipse.org/technology/epp/packages/oxygen/content.xml.xz. The cache file C:\Users\chris\.p2\org.eclipse.equinox.p2.repository\cache\downloading\-1747184149 could not be renamed to C:\Users\chris\.p2\org.eclipse.equinox.p2.repository\cache\-1747184149.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.updateCache(CacheManager.java:428)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCacheFromFile(CacheManager.java:132)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.getLocalFile(XZedSimpleMetadataRepositoryFactory.java:56)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.load(XZedSimpleMetadataRepositoryFactory.java:78)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.oomph.p2.internal.core.ProfileTransactionImpl$RepositoryLoader$Worker.perform(ProfileTransactionImpl.java:1613)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 1 org.eclipse.equinox.p2.repository 4 0 2018-02-19 22:00:25.798
+!MESSAGE An error occurred while downloading http://download.eclipse.org/technology/epp/packages/oxygen/content.xml.xz. The cache file C:\Users\chris\.p2\org.eclipse.equinox.p2.repository\cache\downloading\-1747184149 could not be renamed to C:\Users\chris\.p2\org.eclipse.equinox.p2.repository\cache\-1747184149.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2018-02-19 22:00:25.858
+!MESSAGE Unable to read repository at http://download.eclipse.org/releases/oxygen.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: An error occurred while downloading http://download.eclipse.org/technology/epp/packages/oxygen/content.xml.xz. The cache file C:\Users\chris\.p2\org.eclipse.equinox.p2.repository\cache\downloading\-1747184149 could not be renamed to C:\Users\chris\.p2\org.eclipse.equinox.p2.repository\cache\-1747184149.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.updateCache(CacheManager.java:428)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCacheFromFile(CacheManager.java:132)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.getLocalFile(XZedSimpleMetadataRepositoryFactory.java:56)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.load(XZedSimpleMetadataRepositoryFactory.java:78)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.oomph.p2.internal.core.ProfileTransactionImpl$RepositoryLoader$Worker.perform(ProfileTransactionImpl.java:1613)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 1 org.eclipse.equinox.p2.repository 4 0 2018-02-19 22:00:25.859
+!MESSAGE An error occurred while downloading http://download.eclipse.org/technology/epp/packages/oxygen/content.xml.xz. The cache file C:\Users\chris\.p2\org.eclipse.equinox.p2.repository\cache\downloading\-1747184149 could not be renamed to C:\Users\chris\.p2\org.eclipse.equinox.p2.repository\cache\-1747184149.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 2 1002 2018-02-19 22:00:26.000
+!MESSAGE Unable to read repository at http://download.eclipse.org/releases/oxygen.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: An error occurred while downloading http://download.eclipse.org/technology/epp/packages/oxygen/content.xml.xz. The cache file C:\Users\chris\.p2\org.eclipse.equinox.p2.repository\cache\downloading\-1747184149 could not be renamed to C:\Users\chris\.p2\org.eclipse.equinox.p2.repository\cache\-1747184149.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.updateCache(CacheManager.java:428)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCacheFromFile(CacheManager.java:132)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.getLocalFile(XZedSimpleMetadataRepositoryFactory.java:56)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.load(XZedSimpleMetadataRepositoryFactory.java:78)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.oomph.p2.internal.core.ProfileTransactionImpl$RepositoryLoader$Worker.perform(ProfileTransactionImpl.java:1613)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 1 org.eclipse.equinox.p2.repository 4 0 2018-02-19 22:00:26.000
+!MESSAGE An error occurred while downloading http://download.eclipse.org/technology/epp/packages/oxygen/content.xml.xz. The cache file C:\Users\chris\.p2\org.eclipse.equinox.p2.repository\cache\downloading\-1747184149 could not be renamed to C:\Users\chris\.p2\org.eclipse.equinox.p2.repository\cache\-1747184149.
+
+!ENTRY org.eclipse.oomph.setup.ui 1 0 2018-02-19 22:00:26.002
+!MESSAGE Setup tasks were performed during startup. See 'C:\Users\chris\eclipse\java-oxygen2\eclipse\configuration\org.eclipse.oomph.setup\setup.log' for details
+!SESSION 2018-02-22 11:13:01.168 -----------------------------------------------
+eclipse.buildId=4.7.1.M20171009-0410
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-22 11:13:16.683
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\chris'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.touchpoint.natives 2 0 2018-02-22 11:14:42.993
+!MESSAGE Could not remove temporary backup directory (it is safe to manually delete it and its contents): C:\Users\chris\AppData\Local\Temp\C__Users_chris_eclipse_java-oxygen2_eclipse_2c37996236e0_c0a88901f935
+
+!ENTRY org.eclipse.oomph.setup.ui 1 0 2018-02-22 11:14:43.114
+!MESSAGE Setup tasks were performed during startup. See 'C:\Users\chris\eclipse\java-oxygen2\eclipse\configuration\org.eclipse.oomph.setup\setup.log' for details
+!SESSION 2018-02-23 18:00:04.924 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-02-23 18:00:47.715
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-23 18:01:12.536
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\chris'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-02-23 23:01:00.571 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-23 23:01:15.695
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\chris'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-02-24 01:42:36.076 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-02-24 01:42:44.368
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-24 01:42:57.023
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\chris'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.jobs 2 2 2018-02-24 01:50:38.505
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.ProvisioningJobListener$1
+!SESSION 2018-02-24 01:50:38.775 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -data file:/C:/Users/chris/Desktop/arti/ -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui 2 0 2018-02-24 01:51:00.806
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-02-24 01:51:00.806
+!MESSAGE Cannot bind to an undefined command: plug-in='com.genuitec.eclipse.theming.ui', id='com.genuitec.myeclipse.help.darktheme.commandid'
+
+!ENTRY com.genuitec.eclipse.theming.ui 1 0 2018-02-24 01:51:02.972
+!MESSAGE A DevStyle Theme is being activated on this workspace; preparing colors and configuration
+
+!ENTRY com.genuitec.eclipse.theming.ui 1 0 2018-02-24 01:51:03.000
+!MESSAGE DevStyle has archived current color configurations to alternate preferences - will be restored when switching out of the DevStyle Theme
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-24 01:51:12.705
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\chris'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-02-24 18:50:44.808 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-02-24 18:55:35.797
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-24 18:55:57.282
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\chris'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 11 2018-02-24 18:58:36.896
+!MESSAGE The model index service was accessed either before it started or after it finished running.
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:126)
+	at org.eclipse.recommenders.internal.models.rcp.EclipseModelIndex.suggest(EclipseModelIndex.java:211)
+	at org.eclipse.recommenders.models.SimpleModelProvider.acquireModel(SimpleModelProvider.java:70)
+	at org.eclipse.recommenders.models.PoolingModelProvider.access$0(PoolingModelProvider.java:1)
+	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:96)
+	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:1)
+	at org.apache.commons.pool.impl.GenericKeyedObjectPool.borrowObject(GenericKeyedObjectPool.java:1220)
+	at org.eclipse.recommenders.models.PoolingModelProvider.acquireModel(PoolingModelProvider.java:67)
+	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:65)
+	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:1)
+	at org.eclipse.recommenders.internal.models.rcp.PrefetchModelArchiveJob.run(PrefetchModelArchiveJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SESSION 2018-02-25 15:39:27.222 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-25 15:39:55.119
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\chris'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.137
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Index out of bounds
+	at org.eclipse.swt.SWT.error(SWT.java:4514)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.graphics.TextLayout.getLocationInPixels(TextLayout.java:2050)
+	at org.eclipse.swt.graphics.TextLayout.getLocation(TextLayout.java:2044)
+	at org.eclipse.swt.custom.StyledText.getPointAtOffset(StyledText.java:5506)
+	at org.eclipse.swt.custom.StyledText.setCaretLocation(StyledText.java:8591)
+	at org.eclipse.swt.custom.StyledText.showCaret(StyledText.java:10370)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2883)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.183
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 37
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.212
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 17
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.214
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 17
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.237
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 20
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.245
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 17
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.310
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 2
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.317
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 1
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.332
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4494)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.339
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4494)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.499
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 16
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.521
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 18
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.528
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 18
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.550
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 19
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.557
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 19
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.564
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 19
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.572
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 19
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.579
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 19
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.587
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 19
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.595
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 19
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.602
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 19
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:6146)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5737)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-25 16:08:39.834
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 19
+	at java.lang.String.charAt(Unknown Source)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4493)
+	at org.eclipse.swt.custom.StyledText.getOffsetAtPoint(StyledText.java:4474)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2866)
+	at org.eclipse.swt.custom.StyledText.handleMouseDown(StyledText.java:6107)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5735)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)

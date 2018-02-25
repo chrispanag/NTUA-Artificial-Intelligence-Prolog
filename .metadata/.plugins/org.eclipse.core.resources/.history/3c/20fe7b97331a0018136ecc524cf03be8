@@ -1,0 +1,170 @@
+package arti;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Scanner;
+import java.io.IOException;
+
+import com.ugos.jiprolog.engine.JIPEngine;
+import com.ugos.jiprolog.engine.JIPQuery;
+import com.ugos.jiprolog.engine.JIPSyntaxErrorException;
+import com.ugos.jiprolog.engine.JIPTerm;
+import com.ugos.jiprolog.engine.JIPTermParser;
+
+public class Test {
+	
+	static double min_length = 150;
+	
+	static String[] colors = {"501400FF", "50140050", "5014B4FF", "50FF7800", "507800F0", "50780014", "50F0FF14", "500078F0", "500A0A0A", "5014F0FF"};
+
+	public static void main(String[] args) {
+		JIPEngine jip = new JIPEngine();
+		
+		System.out.println("Compile prolog files? yes/no");
+		String compile = "no";
+		Scanner scanner = new Scanner(System.in); 
+		compile = scanner.nextLine();
+		scanner.close();
+		if (compile.equals("yes") {
+			// Read Lines
+			CSVReader csvLines = new CSVReader("lines.csv");
+			ArrayList<ArrayList<String>> lineData = csvLines.readCSV();
+			ArrayList<Line> lines = new ArrayList<Line>();
+			Iterator<ArrayList<String>> lineData_it = lineData.iterator();
+			while (lineData_it.hasNext()) {
+				ArrayList<String> p = lineData_it.next();
+				lines.add(new Line(p));
+			}
+			
+			// Read Nodes
+			CSVReader csvNodes = new CSVReader("nodes.csv");
+			ArrayList<ArrayList<String>> nodeData = csvNodes.readCSV();
+			ArrayList<Node> nodes = new ArrayList<Node>();
+			HashMap<String, Node> node_map = new HashMap<String, Node>();
+			Iterator<ArrayList<String>> nodeData_it = nodeData.iterator();
+			while (nodeData_it.hasNext()) {
+				ArrayList<String> p = nodeData_it.next();
+				Node n = new Node(p);
+				node_map.put(n.id, n);
+				nodes.add(n);
+			}
+			
+			
+			PrologCreator plCreator_lines = new PrologCreator("./prolog/lines.pl");
+			writeLinePredicates(lines, plCreator_lines);
+			plCreator_lines.close();
+			
+			PrologCreator plCreator_nodes = new PrologCreator("./prolog/nodes.pl");
+			writeNodePredicates(nodes, plCreator_nodes);
+			plCreator_nodes.close();
+			
+			System.out.println(nodes.get(0).id);
+			
+			jip.compileFile("./prolog/predicates.pl");
+		}
+				
+		try {
+			jip.consultFile("./prolog/predicates.cpl");
+		} catch (JIPSyntaxErrorException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		Node start = Node.getNearestNodeRoad(jip, new Coordinate(23.6957, 37.98784), nodes);
+		Node end = Node.getNearestNodeRoad(jip, new Coordinate(23.77904, 37.97404), nodes);
+		System.out.println("Start: " + start.toString());
+		System.out.println("End: " + end.toString());
+		
+		Astar search = new Astar(end, start, 100, node_map, jip);
+		Path test = search.start();
+		XmlCreator output = new XmlCreator("output.kml");
+
+		ArrayList<Path> paths = new ArrayList<Path>();
+		paths.add(test);
+		
+		Iterator<Path> it1 = paths.iterator();
+		int j = 0;
+		while (it1.hasNext()) {
+			Path p = it1.next();
+			String color = colors[j];
+			if (p.length == min_length) {
+				color = "ff009900";
+				j--;
+			}
+			output.addPath(p.path, "test", color);
+			System.out.println(p.length);
+			j++;
+		}
+		output.closeFile();
+		
+		output.close();
+		
+	}
+	
+	public static void writeNodePredicates(ArrayList<Node> nodes, PrologCreator plCreator) {
+		Iterator<Node> node_it = nodes.iterator();
+		while (node_it.hasNext()) {
+			Node n = node_it.next();
+			Predicate k = new Predicate("belongsTo", new String[] {"id" + n.id, "id" + n.line_id});
+			plCreator.writePredicate(k);
+		}
+		
+		node_it = nodes.iterator();
+		Node prev = node_it.next();
+		while (node_it.hasNext()) {
+			Node n = node_it.next();
+			if (prev.line_id.equals(n.line_id)) {
+				Predicate k = new Predicate("isConnected", new String[] {"id" + prev.id, "id" + n.id });
+				plCreator.writePredicate(k);
+			}
+			prev = n;
+		}
+	}
+	
+	public static void writeLinePredicates(ArrayList<Line> lines, PrologCreator plCreator) {
+		Iterator<Line> line_it = lines.iterator();
+		
+		while (line_it.hasNext()) {
+			Line l = line_it.next();
+			if (l.isRoad()) {
+				Predicate k = new Predicate("isRoad", new String[] {"id" + l.id});
+				plCreator.writePredicate(k);
+			}
+		}
+		line_it = lines.iterator();
+		while (line_it.hasNext()) {
+			Line l = line_it.next();
+			if (l.oneway) {
+				Predicate k = new Predicate("oneway", new String[] {"id" + l.id});
+				plCreator.writePredicate(k);
+			}
+		}
+		line_it = lines.iterator();
+		while (line_it.hasNext()) {
+			Line l = line_it.next();
+			if (l.reverse) {
+				Predicate k = new Predicate("reverse", new String[] {"id" + l.id});
+				plCreator.writePredicate(k);
+			}
+		}
+		
+		line_it = lines.iterator();
+		while (line_it.hasNext()) {
+			Line l = line_it.next();
+			if (l.maxspeed > 0) {
+				Predicate k = new Predicate("maxSpeed", new String[] {"id" + l.id, Integer.toString(l.maxspeed)});
+				plCreator.writePredicate(k);
+			}
+		}
+		
+		line_it = lines.iterator();
+		while (line_it.hasNext()) {
+			Line l = line_it.next();
+			Predicate k = new Predicate("lanes", new String[] {"id" + l.id, Integer.toString(l.lanes)});
+			plCreator.writePredicate(k);
+		}
+	}
+	
+}

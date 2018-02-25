@@ -1,0 +1,28 @@
+package arti;
+
+import java.util.ArrayList;
+
+public class Node {
+	public float X;
+	public float Y;
+	public String line_id;
+	public String id;
+	
+	public Node(ArrayList<String> n) {
+		if (n.get(0).length() > 0) {
+			X = Float.parseFloat(n.get(0));
+		}
+		
+		if (n.get(1).length() > 0) {
+			Y = Float.parseFloat(n.get(1));
+		}
+		
+		if (n.get(2).length() > 0) {
+			line_id = n.get(2);
+		}
+		
+		if (n.get(2).length() > 0) {
+			id = n.get(2);
+		}
+	}
+}

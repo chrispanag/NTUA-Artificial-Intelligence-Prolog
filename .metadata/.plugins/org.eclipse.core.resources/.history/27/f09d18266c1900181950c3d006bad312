@@ -1,0 +1,24 @@
+package arti;
+
+import java.util.ArrayList;
+
+public class Node {
+	public Coordinate coord;
+	public String line_id;
+	public String id;
+	
+	public Node(ArrayList<String> n) {
+		//  Set Coordinates
+		if (n.get(0).length() > 0 && n.get(1).length() > 0) {
+			this.coord = new Coordinate(n.get(0), n.get(1));
+		}
+		
+		if (n.get(2).length() > 0) {
+			line_id = n.get(2);
+		}
+		
+		if (n.get(3).length() > 0) {
+			id = n.get(3);
+		}
+	}
+}
